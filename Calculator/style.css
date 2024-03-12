@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ab193e;
+    color: black;
+    text-align: center;
+    border: 5px solid black;
+    padding: 20px;
+}
+
+.one-nine {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 100%; /* Adjusted to fill the available width */
+    max-width: 300px; /* Added max-width for responsiveness */
+    margin: 0 auto;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Added max-width for responsiveness */
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px; /* Adjusted padding for space between border and content */
+}
+
+.num-btn {
+    padding: 20px;
+    border: none;
+    font-size: 16px; /* Adjusted font size for buttons */
+    border: 2px solid black;
+    background-color: palevioletred;
+    color: black;
+    margin: 5px; /* Adjusted margin for space between buttons */
+    width: 50px; /* Adjusted button width */
+    height: 50px; /* Adjusted button height */
+}
+
+.num-btn:hover {
+    background-color: #32020e;
+    color: white;
+}
+
+.input-div {
+    grid-column: span 4;
+    padding: 10px; /* Adjusted padding for input display */
+    border: 3px solid black;
+    font-size: 16px; /* Adjusted font size for input display */
+    height: 5rem;
+    width: 100%;
+    margin: 10px auto; /* Adjusted margin for space between input and buttons */
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+    .num-btn {
+        padding: 10px; /* Adjusted padding for touch-friendly buttons */
+        font-size: 14px; /* Adjusted font size for smaller screens */
+        width: 40px; /* Adjusted button width for smaller screens */
+        height: 40px; /* Adjusted button height for smaller screens */
+    }
+
+    .input-div {
+        padding: 8px; /* Adjusted padding for input display on smaller screens */
+        font-size: 14px; /* Adjusted font size for input display on smaller screens */
+        height: auto; /* Adjusted height to fit content on smaller screens */
+        margin: 5px auto; /* Adjusted margin for space between input and buttons on smaller screens */
+    }
+}
